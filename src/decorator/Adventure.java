@@ -18,27 +18,28 @@ public class Adventure {
         Scanner input = new Scanner(System.in);
         Character pc;
         boolean alive = true;
+        System.out.println("Enter character name:");
+        pc = new BasicCharacter(input.nextLine());
+
+        System.out.println("Choose your Weapon:");
+        System.out.println("1. Sword");
+        System.out.println("2. Spear");
+
+        if(input.nextInt() == 1)
+        {
+            pc = new Sword(pc);
+
+
+        }
+        else
+        {
+            pc = new Spear(pc);
+        }
+
+        System.out.println("You are " + pc.getName() + "with a might of " + pc.getMight());
         do
         {
-            System.out.println("Enter character name:");
-            pc = new BasicCharacter(input.nextLine());
             
-            System.out.println("Choose your Weapon:");
-            System.out.println("1. Sword");
-            System.out.println("2. Spear");
-            
-            if(input.nextInt() == 1)
-            {
-                pc = new Sword(pc);
-                
-                
-            }
-            else
-            {
-                pc = new Spear(pc);
-            }
-            
-            System.out.println("You are " + pc.getName() + "with a might of " + pc.getMight());
             
             System.out.println("What direction do you go?");
             System.out.println("1. Forward");
