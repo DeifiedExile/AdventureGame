@@ -50,7 +50,7 @@ public class Adventure {
                 if(input.next().equalsIgnoreCase("y"))
                 {
                     pc = new Shield(pc);
-                    System.out.println("You are " + pc.getName() + "with a might of " + pc.getMight());
+                    System.out.println("You are " + pc.getName() + " with a might of " + pc.getMight());
                 }
                     
             }
